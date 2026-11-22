@@ -1,0 +1,17 @@
+{
+  "root": "/home/dev/feedback/uid32273",
+  "B": "/home/dev/feedback/uid32273",
+  "sha": "973d03bd33bed7e3bcc3fb9cafeac1a614330448",
+  "wslDistro": "Ubuntu-26.04",
+  "source": {
+    "owner": "chipsec",
+    "repo": "chipsec",
+    "sha": "973d03bd33bed7e3bcc3fb9cafeac1a614330448"
+  },
+  "fork": {
+    "owner": "Rrr119",
+    "repo": "chipsec",
+    "cloneUrl": "https://github.com/Rrr119/chipsec.git"
+  },
+  "at": "2026-11-22T05:07:01.329Z"
+}

@@ -134,6 +134,26 @@
       <field name="EB_LEG_BITMAP_BASE" bit="12" size="52" desc="Linear address bits of legacy code page bitmap" />
   </register>
 
+    <!-- TME related Model Specific Registers (MSR) -->
+    <!-- Check if CPUID(EAX=7,ECX=0):ECX[13] is set before accessing these registers-->
+
+    <register name="IA32_TME_CAPABILITY" type="msr" msr="0x981" desc="TME Capability MSR">
+      <field name="AES_XTS_128" bit="0" size="1" desc="AES-XTS 128 encryption algorithm supported" />
+      <field name="MK_TME_KEYID_BITS" bit="32" size="4" desc="Number of KeyID bits available for TME-MK" />
+      <field name="MK_TME_ALG_AES_XTS_128" bit="48" size="1" desc="TME-MK AES-XTS 128 algorithm supported" />
+      <field name="MK_TME_ALG_AES_XTS_128_INTEGRITY" bit="49" size="1" desc="TME-MK AES-XTS 128 with integrity algorithm supported" />
+      <field name="MK_TME_ALG_AES_XTS_256" bit="50" size="1" desc="TME-MK AES-XTS 256 algorithm supported" />
+    </register>
+    <register name="IA32_TME_ACTIVATE" type="msr" msr="0x982" desc="TME Activate MSR">
+      <field name="LOCK" bit="0" size="1" desc="TME Activate lock (register is read-only when set)" />
+      <field name="TME_ENABLE" bit="1" size="1" desc="TME enable" />
+      <field name="KEY_SELECT" bit="2" size="1" desc="TME key select" />
+      <field name="SAVE_KEY" bit="3" size="1" desc="Save TME key for standby" />
+      <field name="TME_POLICY" bit="4" size="4" desc="TME encryption algorithm policy" />
+      <field name="TME_BYPASS" bit="31" size="1" desc="TME bypass enable" />
+      <field name="MK_TME_KEYID_BITS" bit="32" size="4" desc="Number of KeyID bits in use for TME-MK" />
+    </register>
+
   </registers>
 
   <controls>
